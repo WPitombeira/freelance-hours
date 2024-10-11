@@ -32,6 +32,8 @@ class Create extends Component {
 
         $this->project->proposals()->updateOrCreate(['email' => $this->email], ['hours' => $this->hours]);
 
+        $this->dispatch('proposal::created')->to('projects.proposals');
+
         $this->modal = false;
     }
 }
