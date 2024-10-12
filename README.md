@@ -36,12 +36,23 @@ composer install
 npm install
 ```
 
-3. Execute your web server (to make it easier, I suggest using Artisan)
+3. Run migrations
+```
+php artisan migrate
+```
+
+If you want to see how the project works with mock data, you can use to populate the database
+
+```
+php artisan migrate:seed
+```
+
+4. Execute your web server (to make it easier, I suggest using Artisan)
 ```
 php artisan serve
 ```
 
-4. Initialize the tailwind compiler so the CSS changes be available
+5. Initialize the tailwind compiler so the CSS changes be available
 ```
 npm run dev
 ```
